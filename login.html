@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário Contato</title>
+    <style>
+        *{margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(78, 12, 67);
+        }
+        form{
+            background-color: rgb(255, 255, 255);
+            max-width: 500px;
+            width: 70%;
+            padding: 20px;
+            position: absolute;
+            left: 50%;
+            top:50%;
+            transform:translate(-50%,-50%) ;
+
+
+        }
+        form h3{
+            text-align: center;
+            color: rgb(78, 12, 67);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        form input[type=text], form input[type=password]{
+        width: 100%;
+        height: 45px;
+        border: 1px solid rgb(52, 52, 51);
+        padding-left:15px ;
+        margin:15px 0;
+
+        }
+        form input[type=button]{
+            width: 100%;
+            height: 50px;
+            cursor:pointer;
+            background-color:rgb(78, 12, 67) ;
+           color: white;
+           font-size: 20px;
+           
+        
+        }
+    </style>
+ 
+</head>
+<body>
+
+    <form >
+<h3> Login  </h3>
+<i class="fa fa-search"></i>
+<input type="text" name="email" placeholder="Seu e-mail..." id="email">
+<input type="password" name="senha" placeholder="Sua senha..." id="senha">
+<input type="button" name="acao " value="Enviar" onclick="ler()">
+    </form>
+
+
+    <script>
+
+
+
+
+function newDoc() {
+   
+  
+   
+}
+
+function newDoc2() {
+  
+  
+   
+}
+
+        function ler(){ 
+            
+           
+            var usuario =document.getElementById("email").value;
+        
+            switch(usuario){
+
+                case "administrador":
+                    alert("Administrador")
+                   
+                    break;
+
+                case "operador":
+                    alert("Operador") 
+                    break;
+                default:
+                    alert("Nenhum caso") 
+                    break;  
+            }
+            var opcao = confirm("Deseja entrar?")
+           if(opcao==true){
+            window.location.assign("http://www.w3schools.com") } else{
+        window.location.assign("https://developer.mozilla.org/pt-BR/docs/Web/API/window/confirm")
+    }
+
+         
+
+       
+
+}
+
+    </script>
+
+</body>
+</html>
